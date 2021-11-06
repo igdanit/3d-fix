@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3dFix|Shop</title>
+    <meta name="description" content="3d_Fix_Shop">
+    <meta name="author" content="GitHub:igdanit">
+    <link rel="stylesheet" href="{% static 'shop/styles/mystyle.css' %}">
+</head>
+<body>
+    <div class="left sidenav">
+        <a href="/parts">Детали</a>
+        <a href="/printers">Принтеры</a>
+        <a href="/filaments">Филамент</a>
+    </div>
+    <div class="upper sidenav">
+        <div class="links">
+            <a href="/delivery">Доставка</a>
+            <a href="/contacts">Контакты</a>
+        </div>
+    </div>
+    <div id="location">
+        {% block category %}
+        {% endblock %}>
+    </div>
+    <div id="items">
+        {% block items %}
+        {% endblock %}
+    </div>
+</body>
+</html>
